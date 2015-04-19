@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.touchtest.FrameLayoutSpy xmlns:android="http://schemas.android.com/apk/res/android"
+                              xmlns:tools="http://schemas.android.com/tools"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              tools:context=".MainActivity"
+                              android:tag="ACTIVITY_MAIN_TOP">
+
+    <com.touchtest.RecyclerViewSpy android:id="@android:id/list"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"/>
+
+    <com.touchtest.LinearLayoutSpy android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:padding="50dp"
+                                   android:gravity="center_horizontal"
+                                   android:background="#ffffff"
+                                   android:tag="ACTIVITY_MAIN_BUTTON">
+
+        <com.touchtest.ButtonSpy android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="center_horizontal"
+                                 android:text="Click Me!"
+                                 android:tag="BUTTON_TOP"
+                                 android:focusableInTouchMode="false"
+                                 android:focusable="false"/>
+
+    </com.touchtest.LinearLayoutSpy>
+
+</com.touchtest.FrameLayoutSpy>
