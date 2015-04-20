@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <com.touchtest.LinearLayoutSpy xmlns:android="http://schemas.android.com/apk/res/android"
-                                          android:orientation="vertical"
-                                          android:layout_width="match_parent"
-                                          android:layout_height="150dp"
-                                          android:tag="ITEM_TOP">
+                               android:orientation="vertical"
+                               android:layout_width="match_parent"
+                               android:layout_height="150dp"
+                               android:tag="ITEM_TOP">
 
     <TextView android:id="@+id/item_position"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:gravity="center_horizontal"/>
 
-    <com.touchtest.ButtonSpy android:id="@+id/item_click"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center_horizontal"
-                                        android:text="Click!"
-                                        android:tag="ITEM_BUTTON"/>
+    <Button android:id="@+id/item_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Click!"
+            android:tag="ITEM_BUTTON"/>
 
 </com.touchtest.LinearLayoutSpy>

@@ -12,13 +12,14 @@
                                    android:layout_height="match_parent"/>
 
     <com.touchtest.LinearLayoutSpy android:layout_width="match_parent"
-                                   android:layout_height="wrap_content"
+                                   android:layout_height="200dp"
                                    android:padding="50dp"
                                    android:gravity="center_horizontal"
                                    android:background="#ffffff"
                                    android:tag="ACTIVITY_MAIN_BUTTON">
 
-        <com.touchtest.ButtonSpy android:layout_width="wrap_content"
+        <com.touchtest.ButtonSpy android:id="@+id/button"
+                                 android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
                                  android:layout_gravity="center_horizontal"
                                  android:text="Click Me!"

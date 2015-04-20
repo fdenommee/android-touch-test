@@ -17,20 +17,30 @@ import butterknife.InjectView;
 public class MainActivity
         extends Activity {
 
+    @InjectView(android.R.id.list)
+    RecyclerView list;
+
+    @InjectView(R.id.button)
+    Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
-        RecyclerView list = (RecyclerView)findViewById(android.R.id.list);
+        ButterKnife.inject(this);
+
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(new Adapter(this));
-    }
 
-//    public void onClickMe(final View v) {
-//        Toast.makeText(this, "Activity - Clicked!", Toast.LENGTH_SHORT).show();
-//    }
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Activity - Clicked!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     public class Adapter
             extends RecyclerView.Adapter<ViewHolder> {
@@ -69,6 +79,13 @@ public class MainActivity
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.inject(this, itemView);
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "ViewHolder - Clicked!", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
         public void setPosition(final int position) {
