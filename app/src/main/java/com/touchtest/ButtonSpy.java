@@ -49,7 +49,7 @@ public class ButtonSpy
     public boolean dispatchTouchEvent(MotionEvent ev) {
         boolean result = super.dispatchTouchEvent(ev);
         Log.d("ButtonSpy", String.format("dispatchTouchEvent(%s, %s, %s)", getTag(), result, ev));
-        return true; //result;
+        return result;
     }
 
     private void init() {
