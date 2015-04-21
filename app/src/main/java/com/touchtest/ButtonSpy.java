@@ -77,7 +77,7 @@ public class ButtonSpy
         boolean result = false; //super.dispatchTouchEvent(ev);
 
         if (clicked) {
-            result = super.dispatchTouchEvent(ev);
+//            result = super.dispatchTouchEvent(ev);
         }
 
         Log.d("ButtonSpy", String.format("dispatchTouchEvent(%s, %s, %s)", getTag(), result, ev));
@@ -112,6 +112,7 @@ public class ButtonSpy
             public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
                 Log.d("ButtonSpy-gesture", String.format("onScroll(%s, %s, %s, %s, %s)",
                                                          getTag(), e1, e2, distanceX, distanceY));
+                getList().scrollBy(0, (int)distanceY);
                 return false;
             }
 
